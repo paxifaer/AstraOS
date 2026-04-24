@@ -1,0 +1,30 @@
+[package]
+name = "astraos-kernel"
+version = "0.1.0"
+edition = "2021"
+authors = ["AstraOS Team"]
+description = "Core kernel module for AstraOS robot operating system"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/astraos/astraos"
+homepage = "https://astraos.dev"
+
+[dependencies]
+tokio = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+uuid = { workspace = true, features = ["v4", "serde"] }
+serde_json = { workspace = true }
+async-trait = { workspace = true }
+thiserror = { workspace = true }
+dashmap = { workspace = true }
+parking_lot = { workspace = true }
+chrono = { workspace = true }
+
+[lib]
+name = "astraos_kernel"
+path = "src/lib.rs"
+
+[[bin]]
+name = "kernel"
+path = "src/main.rs"

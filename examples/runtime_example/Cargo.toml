@@ -1,0 +1,23 @@
+[package]
+name = "runtime_example"
+version = "0.1.0"
+edition = "2021"
+authors = ["AstraOS Team"]
+description = "Example application demonstrating AstraOS runtime features"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/astraos/astraos"
+homepage = "https://astraos.dev"
+
+[dependencies]
+astraos_runtime = { package = "astraos-runtime", path = "../../runtime" }
+tokio = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+serde_json = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+async-trait = { workspace = true }
+
+[[bin]]
+name = "runtime_example"
+path = "src/main.rs"

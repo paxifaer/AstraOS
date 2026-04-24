@@ -1,0 +1,31 @@
+[package]
+name = "astraos-runtime"
+version = "0.1.0"
+edition = "2021"
+authors = ["AstraOS Team"]
+description = "Runtime execution environment for AstraOS"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/astraos/astraos"
+homepage = "https://astraos.dev"
+
+[dependencies]
+tokio = { workspace = true }
+serde = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+uuid = { workspace = true }
+serde_json = { workspace = true }
+async-trait = { workspace = true }
+thiserror = { workspace = true }
+dashmap = { workspace = true }
+parking_lot = { workspace = true }
+chrono = { workspace = true }
+priority-queue = { workspace = true }
+
+[dependencies.astraos_kernel]
+path = "../kernel"
+package = "astraos-kernel"
+
+[lib]
+name = "astraos_runtime"
+path = "src/lib.rs"

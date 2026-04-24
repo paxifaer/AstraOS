@@ -1,2 +1,0 @@
-# AstraOS
-OS for robotics

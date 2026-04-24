@@ -1,0 +1,21 @@
+[package]
+name = "comms_example"
+version = "0.1.0"
+edition = "2021"
+authors = ["AstraOS Team"]
+description = "Example application demonstrating AstraOS communication features"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/astraos/astraos"
+homepage = "https://astraos.dev"
+
+[dependencies]
+astraos-comms = { path = "../../comms" }
+tokio = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+serde_json = { workspace = true }
+uuid = { workspace = true }
+
+[[bin]]
+name = "comms_example"
+path = "src/main.rs"
